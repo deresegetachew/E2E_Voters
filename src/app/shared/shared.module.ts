@@ -9,13 +9,14 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatPaginatorModule } from '@angular/material/paginator'
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     MatInputModule,
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatProgressBarModule,
     MatChipsModule,
     MatPaginatorModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class SharedModule { }
