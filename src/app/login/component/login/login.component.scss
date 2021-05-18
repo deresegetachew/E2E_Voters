@@ -1,0 +1,72 @@
+.grey-bg {
+  background-color: #ededed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  justify-content: center;
+  // align-content: center;
+  align-items: center;
+
+  div {
+    // background-color: cyan;
+    // height: 500px;
+    width: 800px;
+  }
+
+  .mat-card {
+    padding: 0;
+  }
+
+}
+
+
+.login-cont {
+  //background-color: cyan;
+
+  display: flex;
+  flex-direction: row;
+  // flex: 1fr 2fr;
+  width: 200px;
+  height: 400px;
+
+
+}
+
+.login-img {
+  flex: 1;
+ // background-color: darkgreen;
+
+  background-image: url(../../../../assets/img.PNG);
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+}
+
+.login-form {
+  flex: 1;
+
+  border: 1px solid grey;
+ // background-color: darkorange;
+}
+
+.login-form-cont {
+  // display: contents;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.row-1 {
+ flex: 1;
+  background-color: darkorange;
+}
+.row-2 {
+  flex: 3.5;
+  background-color: darkred;
+}
+.row-3 {
+  flex: 1.5;
+  background-color: darkslateblue;
+}
