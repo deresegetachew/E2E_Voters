@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
+import { User } from '../../shared/models/login.model';
 
 @Component({
   selector: 'app-login-form',
@@ -7,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
 
-  constructor() { }
+  user: User;
+  @Output()
+  login = new EventEmitter<User>();
+  constructor() {
+    this.user = {
+      password: "",
+      userName: ""
+    };
+  }
 
   ngOnInit(): void {
 
   }
+  onSubmit() {
+    this.login.emit(this.user);
 
+  }
 }

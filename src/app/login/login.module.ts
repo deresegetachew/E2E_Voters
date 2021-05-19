@@ -17,9 +17,8 @@ import { LoginSocialComponent } from './component/login-social/login-social.comp
     LoginSocialComponent
   ],
   imports: [
-    CommonModule,
-    LoginRoutingModule,
-    SharedModule
+    SharedModule,
+    LoginRoutingModule
   ]
 })
 export class LoginModule { }

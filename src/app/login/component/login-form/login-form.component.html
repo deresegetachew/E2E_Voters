@@ -1,1 +1,21 @@
-<p>login-form works!</p>
+<p class="txt-lg">Login</p>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="login-form">
+    <label class="txt-md" for="username">Username</label>
+    <mat-form-field class="form-field" appearance="fill">
+        <!-- TODO: IS HACK BY FILMON-->
+        <input class="form-control" matInput [(ngModel)]="user.userName" required id="username" name="username" #username>
+        <mat-error *ngIf="!username.validity.valid">
+            Please enter a valid username
+        </mat-error>
+    </mat-form-field>
+    <label for="password">Password</label>
+    <mat-form-field  class="form-field" appearance="fill">
+        <!-- TODO: IS HACK BY FILMON-->
+        <input class="form-control" type="password" matInput [(ngModel)]="user.password" required
+            name="password" id="username" #password>
+        <mat-error *ngIf="!password.validity.valid">
+            Please enter a valid password
+        </mat-error>
+    </mat-form-field>
+    <button class="login-btn" type="submit" mat-flat-button color="primary">Login</button>
+</form>

@@ -5,14 +5,19 @@
 
       <mat-card-content>
         <div class="login-cont">
-          <div class="login-img"></div>
+          <div class="login-img">
+          </div>
           <div class="login-form">
 
              <div class="login-form-cont">
               <!-- <div> -->
-                <div class="row-1">1111</div>
-                <div class="row-2">2222</div>
-                <div class="row-3">33333</div>
+                <div class="row-1">
+                  <div class="register"><a href="#">Register</a></div>
+                </div>
+                <div class="row-2"><app-login-form (login)="onLogin($event)"></app-login-form></div>
+                <div class="row-3">
+                  <app-login-social [medias]="medias"></app-login-social>
+                </div>
               <!-- </div> -->
             </div>
           </div>

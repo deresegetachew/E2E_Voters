@@ -1,0 +1,36 @@
+<div class="grey-bg">
+    <div class="form-cont">
+        <div class="">
+            <mat-card class="example-card">
+
+                <mat-card-content>
+                    <div class="login-cont">
+                        <div class="login-img">
+                        </div>
+                        <div class="login-form">
+
+                            <div class="login-form-cont">
+                                <!-- <div> -->
+                                <div class="row-1">
+                                    <div class="register"><a href="#">Register</a></div>
+                                </div>
+                                <div class="row-2">
+                                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form">
+                                        <label class="txt-md" for="username">Username</label>
+                                        <mat-form-field class="form-field" appearance="fill">
+                                            <!-- TODO: IS HACK BY FILMON-->
+                                            <input class="form-control" matInput formControlName="firstName" id="firstName" name="firstName">
+                                            <!-- <mat-error *ngIf="firstName.errors?.required">
+                                                Please enter a valid username
+                                            </mat-error> -->
+                                        </mat-form-field>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

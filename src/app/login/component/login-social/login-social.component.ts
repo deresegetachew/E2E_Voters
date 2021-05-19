@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-login-social',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-social.component.scss']
 })
 export class LoginSocialComponent implements OnInit {
+  
+  @Input()
+  medias: string[] = [];
 
   constructor() { }
 
