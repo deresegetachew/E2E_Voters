@@ -10,7 +10,7 @@ import { passwordMatch } from 'src/app/shared/validators/password-match.validato
 export class RegisterComponent implements OnInit {
 
   registerForm = new FormGroup({
-    firstName: new FormControl('', [Validators.required]),
+    firstName: new FormControl('', [Validators.required, Validators.maxLength(4)]),
     middleName: new FormControl('', [Validators.required]),
     lastName: new FormControl('',[Validators.required]),
     userName: new FormControl('',[Validators.required, Validators.maxLength(5)]),

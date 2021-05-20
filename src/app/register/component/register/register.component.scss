@@ -46,7 +46,8 @@
   
   .login-form {
     flex: 1.30;
-    margin-left: 15px;;
+    margin-left: 15px;
+    overflow: auto;
   }
   
   .login-form-cont {
@@ -81,4 +82,32 @@
   .row-3 {
     flex: 1.5;
   }
+
+  .register-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .form-row{
+    display: flex;
+  }
+  .register-left{
+    flex: 1;
+  }
+
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+}
+::ng-deep .form-field.mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 10px;
+    padding: 0 .75em 0 .75em;
+}
+
+.login-btn {
+  width: 75%;
+  margin-bottom: 30px;
+}
+
+::ng-deep .mat-flat-button.mat-primary{
+  background-color: #3ea2f9;
+}
   

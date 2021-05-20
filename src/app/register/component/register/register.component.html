@@ -10,20 +10,116 @@
                         <div class="login-form">
 
                             <div class="login-form-cont">
-                                <!-- <div> -->
                                 <div class="row-1">
-                                    <div class="register"><a href="#">Register</a></div>
+                                    <div class="register"><a routerLink="/login">Login</a></div>
                                 </div>
                                 <div class="row-2">
                                     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form">
-                                        <label class="txt-md" for="username">Username</label>
-                                        <mat-form-field class="form-field" appearance="fill">
-                                            <!-- TODO: IS HACK BY FILMON-->
-                                            <input class="form-control" matInput formControlName="firstName" id="firstName" name="firstName">
-                                            <!-- <mat-error *ngIf="firstName.errors?.required">
-                                                Please enter a valid username
-                                            </mat-error> -->
-                                        </mat-form-field>
+                                        <div class="register-container">
+                                            <div class="form-row">
+                                                <div class="register-left">
+                                                    <label class="txt-md" for="firstName">First Name</label>
+                                                    <mat-form-field class="form-field" appearance="fill">
+                                                        <input class="form-control" matInput formControlName="firstName"
+                                                            id="firstName" name="firstName">
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('firstName')?.hasError('required')">
+                                                                This field is required
+                                                            </span>
+                                                        </mat-error>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="register-left">
+                                                    <label class="txt-md" for="subCity">Sub City</label>
+                                                    <mat-form-field class="form-field" appearance="fill">
+                                                        <input class="form-control" matInput formControlName="subCity"
+                                                            id="subCity" name="subCity">
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('subCity')?.hasError('required')">
+                                                                This field is required
+                                                            </span>
+                                                        </mat-error>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="register-left">
+                                                    <label class=" txt-md" for="middleName">Middle Name</label>
+                                                    <mat-form-field class="form-field" appearance="fill">
+                                                        <input class="form-control" matInput
+                                                            formControlName="middleName" id="middleName"
+                                                            name="middleName">
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('middleName')?.hasError('required')">
+                                                                This field is required
+                                                            </span>
+                                                        </mat-error>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="register-left">
+                                                    <label class="txt-md" for="woreda">Woreda</label>
+                                                    <mat-form-field class="form-field" appearance="fill">
+                                                        <input class="form-control" matInput formControlName="woreda"
+                                                            id="woreda" name="woreda">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="register-left">
+                                                    <label class="txt-md" for="lastName">Last Name</label>
+                                                    <mat-form-field class="form-field" appearance="fill">
+                                                        <input class="form-control" matInput formControlName="lastName"
+                                                            id="lastName" name="lastName">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="register-left">
+                                                    <label class="txt-md" for="userName">User Name</label>
+                                                    <mat-form-field class="form-field" appearance="fill">
+                                                        <input class="form-control" matInput formControlName="userName"
+                                                            id="userName" name="userName">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="register-left">
+                                                    <label class="txt-md" for="password">Password</label>
+                                                    <mat-form-field class=" form-field" appearance="fill">
+                                                        <input class="form-control" matInput formControlName="password"
+                                                            id="password" name="password">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="register-left">
+                                                    <label class="txt-md" for="houseNumber">House Number</label>
+                                                    <mat-form-field class="form-field" appearance="fill">
+                                                        <input class="form-control" matInput
+                                                            formControlName="houseNumber" id="houseNumber"
+                                                            name="houseNumber">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="register-left">
+                                                    <label class="txt-md" for="idNumber">ID No</label>
+                                                    <mat-form-field class="form-field" appearance="fill">
+                                                        <input class="form-control" matInput formControlName="idNumber"
+                                                            id="idNumber" name="idNumber">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="register-left">
+                                                    <label class="txt-md" for="confirmPassword">Confirm Password</label>
+                                                    <mat-form-field class="form-field" appearance="fill">
+                                                        <input class="form-control" matInput
+                                                            formControlName="confirmPassword" id="confirmPassword"
+                                                            name="confirmPassword">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="login-btn" type="submit" mat-flat-button
+                                            color="primary">Register</button>
                                     </form>
                                 </div>
                             </div>
