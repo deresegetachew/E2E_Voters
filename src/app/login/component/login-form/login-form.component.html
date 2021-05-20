@@ -2,18 +2,16 @@
 <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="login-form">
     <label class="txt-md" for="username">Username</label>
     <mat-form-field class="form-field" appearance="fill">
-        <!-- TODO: IS HACK BY FILMON-->
-        <input class="form-control" matInput [(ngModel)]="user.userName" required id="username" name="username" #username>
-        <mat-error *ngIf="!username.validity.valid">
+        <input class="form-control" matInput [(ngModel)]="user.userName" required id="username" name="username">
+        <mat-error *ngIf="!loginForm?.controls?.username?.valid">
             Please enter a valid username
         </mat-error>
     </mat-form-field>
     <label for="password">Password</label>
     <mat-form-field  class="form-field" appearance="fill">
-        <!-- TODO: IS HACK BY FILMON-->
         <input class="form-control" type="password" matInput [(ngModel)]="user.password" required
-            name="password" id="username" #password>
-        <mat-error *ngIf="!password.validity.valid">
+            name="password" id="username">
+        <mat-error *ngIf="!loginForm?.controls?.password?.valid">
             Please enter a valid password
         </mat-error>
     </mat-form-field>
