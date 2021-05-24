@@ -34,7 +34,7 @@
                                                     <label class="txt-md" for="subCity">Sub City</label>
                                                     <mat-form-field class="form-field" appearance="fill">
                                                         <input class="form-control" matInput formControlName="subCity"
-                                                            id="subCity" name="subCity">
+                                                            id="subCity" name="subCity" />
                                                         <mat-error>
                                                             <span
                                                                 *ngIf="registerForm.get('subCity')?.hasError('required')">
@@ -50,7 +50,7 @@
                                                     <mat-form-field class="form-field" appearance="fill">
                                                         <input class="form-control" matInput
                                                             formControlName="middleName" id="middleName"
-                                                            name="middleName">
+                                                            name="middleName" />
                                                         <mat-error>
                                                             <span
                                                                 *ngIf="registerForm.get('middleName')?.hasError('required')">
@@ -64,6 +64,12 @@
                                                     <mat-form-field class="form-field" appearance="fill">
                                                         <input class="form-control" matInput formControlName="woreda"
                                                             id="woreda" name="woreda">
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('woreda')?.hasError('required')">
+                                                                This field is required
+                                                            </span>
+                                                        </mat-error>
                                                     </mat-form-field>
                                                 </div>
                                             </div>
@@ -72,23 +78,43 @@
                                                     <label class="txt-md" for="lastName">Last Name</label>
                                                     <mat-form-field class="form-field" appearance="fill">
                                                         <input class="form-control" matInput formControlName="lastName"
-                                                            id="lastName" name="lastName">
+                                                            id="lastName" name="lastName" />
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('lastName')?.hasError('required')">
+                                                                This field is required
+                                                            </span>
+                                                        </mat-error>
                                                     </mat-form-field>
+
                                                 </div>
                                                 <div class="register-left">
                                                     <label class="txt-md" for="userName">User Name</label>
                                                     <mat-form-field class="form-field" appearance="fill">
                                                         <input class="form-control" matInput formControlName="userName"
                                                             id="userName" name="userName">
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('userName')?.hasError('required')">
+                                                                This field is required
+                                                            </span>
+                                                        </mat-error>
                                                     </mat-form-field>
+
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="register-left">
                                                     <label class="txt-md" for="password">Password</label>
                                                     <mat-form-field class=" form-field" appearance="fill">
-                                                        <input class="form-control" matInput formControlName="password"
+                                                        <input  type="password" class="form-control" matInput formControlName="password"
                                                             id="password" name="password">
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('password')?.hasError('required')">
+                                                                This field is required
+                                                            </span>
+                                                        </mat-error>
                                                     </mat-form-field>
                                                 </div>
                                                 <div class="register-left">
@@ -97,6 +123,12 @@
                                                         <input class="form-control" matInput
                                                             formControlName="houseNumber" id="houseNumber"
                                                             name="houseNumber">
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('houseNumber')?.hasError('required')">
+                                                                This field is required
+                                                            </span>
+                                                        </mat-error>
                                                     </mat-form-field>
                                                 </div>
                                             </div>
@@ -106,14 +138,26 @@
                                                     <mat-form-field class="form-field" appearance="fill">
                                                         <input class="form-control" matInput formControlName="idNumber"
                                                             id="idNumber" name="idNumber">
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('idNumber')?.hasError('required')">
+                                                                This field is required
+                                                            </span>
+                                                        </mat-error>
                                                     </mat-form-field>
                                                 </div>
                                                 <div class="register-left">
                                                     <label class="txt-md" for="confirmPassword">Confirm Password</label>
                                                     <mat-form-field class="form-field" appearance="fill">
-                                                        <input class="form-control" matInput
+                                                        <input type="password" class="form-control" matInput
                                                             formControlName="confirmPassword" id="confirmPassword"
                                                             name="confirmPassword">
+                                                        <mat-error>
+                                                            <span
+                                                                *ngIf="registerForm.get('confirmPassword')?.errors?.mismatch">
+                                                                The password is not repeated exactly
+                                                            </span>
+                                                        </mat-error>
                                                     </mat-form-field>
                                                 </div>
                                             </div>

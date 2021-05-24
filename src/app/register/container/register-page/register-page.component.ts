@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { passwordMatch } from 'src/app/shared/validators/password-match.validator';
+import { Component, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { Register } from '../../shared/models/register.model';
+import { RegisterService } from '../../shared/services/register.service';
 
 @Component({
   selector: 'app-register-page',
@@ -9,10 +10,18 @@ import { passwordMatch } from 'src/app/shared/validators/password-match.validato
 })
 export class RegisterPageComponent implements OnInit {
 
-
-  constructor() { }
+  constructor(private registerService: RegisterService , private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  onRegister(register:Register){
+    if(this.registerService.register(register)){      
+      this.router.navigate(['/login']);
+    }
+    else
+    {
+      console.log("Oops registration was not succesful, please try again!");
+    }
+  }
 }
